@@ -10,7 +10,7 @@ export default defineConfig({
     vue({include: [/\.vue$/, /\.md$/],}),
     vueDevTools(),
   ],
-  base: './',
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
