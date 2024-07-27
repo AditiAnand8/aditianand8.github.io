@@ -16,17 +16,14 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'dist', // Output directory for the build
-    assetsDir: 'assets', // Directory to nest generated static assets under
-    sourcemap: false, // Generate source maps for the build
-    minify: 'esbuild', // Minification option, can be 'terser' or 'esbuild'
     rollupOptions: {
-      output: {
-        manualChunks: {
-          // Example of manually splitting vendor and app code
-          vendor: ['vue']
+        output:{
+            manualChunks(id) {
+                if (id.includes('node_modules')) {
+                    return id.toString().split('node_modules/')[1].split('/')[0].toString();
+                }
+            }
         }
-      }
     }
-  }
+}
 })
