@@ -14,5 +14,19 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    outDir: 'dist', // Output directory for the build
+    assetsDir: 'assets', // Directory to nest generated static assets under
+    sourcemap: false, // Generate source maps for the build
+    minify: 'esbuild', // Minification option, can be 'terser' or 'esbuild'
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Example of manually splitting vendor and app code
+          vendor: ['vue']
+        }
+      }
+    }
   }
 })
