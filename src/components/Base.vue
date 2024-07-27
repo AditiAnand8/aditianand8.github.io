@@ -2,15 +2,15 @@
 defineProps<{
   msg: string
 }>()
+import { portfolioContent } from '../assets/about.js';
+const portfolio = portfolioContent;
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h2 class="green font-mono">{{ msg }} | {{ portfolio.about.location }}</h2>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+      Turning coding chaos into smooth sailing, managing teams with style, and mentoring like it's a game show where everyone wins. What's next?
     </h3>
   </div>
 </template>
