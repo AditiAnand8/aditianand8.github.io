@@ -1,5 +1,33 @@
-# Vue 3 + Vite
+# vuejs-portofolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> Portfolio template using VueJs framework.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D) ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white) ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+
+<img align="center" src="src\assets\Screenshot.png" alt="portfolio-vuejs preview"></img>
+
+## Features
+
+- Builded with VueJs framework ✨
+- One page layout ✨
+- Material design ✨
+- Bootstrap 4.5 & css ✨
+- Responsive ✨
+- Animated layout ✨
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+# serve with hot reload at localhost:8080
+npm run dev
+# build for production with minification
+npm run build
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+## 📝 License
+
+This project is under [MIT] license
