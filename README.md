@@ -1,35 +1,34 @@
-# vue-project
+# DSFolio V2
 
-This template should help get you started developing with Vue 3 in Vite.
+<center>
+    <img src="/public/img/cover.png" alt="Reactfolio" />
 
-## Recommended IDE Setup
+    https://dsfolio.vercel.app/
+</center>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Installation
+1. Clone the repository
+    ```bash 
+    git clone https://github.com/dsbalico/dsfolio-v2.git
+    ```
+2. Change into the project directory
+    ```bash
+    cd dsfolio-v2
+    ```
+3. Install dependencies
+    ```bash
+    yarn install 
+    ```
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+## Usage
+To start the development server and view the project in your browser, run the following command:
+```bash
+yarn dev
 ```
+Visit http://localhost:3000/ in your browser
 
-### Compile and Hot-Reload for Development
+## Configurations
+- You can change content of the website at `/static/content.json`
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+## Contributing
+Feel free to contribute to this project by opening issues or submitting pull requests. Your feedback is highly appreciated!
