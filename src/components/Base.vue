@@ -2,7 +2,7 @@
 defineProps<{
   msg: string
 }>()
-import { portfolioContent } from '../assets/about.js';
+import { portfolioContent } from '../../dist/assets/about';
 const portfolio = portfolioContent;
 </script>
 
