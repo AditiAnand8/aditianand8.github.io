@@ -6,7 +6,7 @@
         <img v-if="edu.logo" :src="edu.logo" alt="Project Logo" class="w-20 h-20 object-contain mr-4" />
         <div>
           <h3 class="text-xl font-semibold text-green-800">
-            {{ edu.name }} - ({{ edu.year }})
+            {{ edu.name }} 
           </h3>
           <p class="text-gray-700">Description: {{ edu.description }}</p>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
@@ -25,7 +25,7 @@
         <img v-if="cert.logo" :src="cert.logo" alt="Certification Logo" class="w-20 h-20 object-contain mr-4" />
         <div>
           <h3 class="text-xl font-semibold text-green-800">
-            {{ cert.name }} - ({{ cert.year }})
+            {{ cert.name }}
           </h3>
           <p class="text-gray-700">Description: {{ cert.description }}</p>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
