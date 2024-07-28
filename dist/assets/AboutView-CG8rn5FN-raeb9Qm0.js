@@ -1,1 +1,0 @@
-import{B as a,r,A as s,j as t}from"./index-B6fnlCks.js";const n={},e={class:"about"},o=a("h1",null,"This is an about page",-1),u=[o];function i(c,d){return s(),t("div",e,u)}const f=r(n,[["render",i]]);export{f as default};

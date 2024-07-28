@@ -41,7 +41,8 @@
 </template>
 
 <script setup lang="ts">
-import { portfolioContent } from '../assets/about'
+// @ts-ignore
+import { portfolioContent } from '../../dist/assets/AboutView-cFrz4fWF'
 const portfolio = portfolioContent
 </script>
 

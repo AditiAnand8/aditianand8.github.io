@@ -2,6 +2,7 @@
 defineProps<{
   msg: string
 }>()
+// @ts-ignore
 import {portfolioContent} from '../assets/about';
 const portfolio = portfolioContent;
 </script>
