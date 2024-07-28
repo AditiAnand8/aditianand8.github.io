@@ -44,7 +44,7 @@ export const portfolioContent = {
       institution: 'Purdue University - Krannert School of Management',
       year: '2020',
       logo: 'https://business.purdue.edu/includes/img/medsb_v-full-rgb.png',
-      url: ''
+      url: 'https://www.purdue.edu/'
     },
     {
       title: 'Certified ScrumMaster (CSM)',
@@ -83,11 +83,79 @@ export const portfolioContent = {
     }
   ],
 
-  skills: {
-    frontend: ['JavaScript', 'Vue.js', 'React', 'HTML', 'CSS', 'TypeScript'],
-    backend: ['Node.js', 'Express', 'Python', 'Django', 'Ruby on Rails'],
-    databases: ['MongoDB', 'PostgreSQL', 'MySQL'],
-    devops: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Azure'],
-    tools: ['Git', 'Webpack', 'Babel', 'Jenkins', 'GraphQL']
-  }
+  skills: [
+    {
+      title: 'Programming Languages',
+      values: ['Python', 'C#', 'Java', 'C++', 'JavaScript']
+    },
+    {
+      title: 'Frontend',
+      values: [
+        'Vue',
+        'Vuex',
+        'React',
+        'Redux',
+        'jQuery',
+        'D3',
+        'TypeScript',
+        'Tailwind CSS',
+        'HTML',
+        'CSS'
+      ]
+    },
+    {
+      title: 'Backend',
+      values: ['Django', 'Flask', 'ASP.NET', 'Node', 'Spring']
+    },
+    {
+      title: 'Databases',
+      values: ['SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Neo4j', 'Cockroach DB']
+    },
+    {
+      title: 'Distributed Computing',
+      values: [
+        'Virtual Machines',
+        'Azure SQL Database',
+        'Azure Functions',
+        'AWS EC2',
+        'AWS S3',
+        'AWS Lambda',
+        'AWS RDS',
+        'OpenShift'
+      ]
+    },
+    {
+      title: 'DevOps',
+      values: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Azure']
+    },
+    {
+      title: 'Testing',
+      values: ['Unit Testing', 'Integration Testing', 'Test Automation', 'PyTest', 'PyUnit']
+    },
+    {
+      title: 'Game Development',
+      values: ['Unity3D', 'OpenGL']
+    },
+    {
+      title: 'Other',
+      values: [
+        '.NET',
+        'WPF',
+        'MVC',
+        'Entity Framework',
+        'Microservices Architecture',
+        'API Design & Integration',
+        'Agile Methodologies',
+        'JSON',
+        'AJAX',
+        'WebSocket',
+        'GraphQL',
+        'Pandas',
+        'Webpack',
+        'Vite',
+        'Rollup',
+        'NGINX'
+      ]
+    }
+  ]
 }

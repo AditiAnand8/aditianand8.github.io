@@ -4,24 +4,32 @@ import Base from './components/Base.vue'
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div class="w-full min-h-screen flex flex-col">
     <header class="bg-white text-gray-800 shadow-md fixed top-0 w-full z-10">
-      <nav class="container mx-auto flex justify-center lg:justify-start space-x-4 py-4">
-        <RouterLink to="/" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Home</RouterLink>
-        <RouterLink to="/about" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">About</RouterLink>
-        <RouterLink to="/projects" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Projects</RouterLink>
-        <RouterLink to="/contact" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Contact</RouterLink>
-      </nav>
+      <nav class="container mx-auto flex justify-center lg:justify-start custom-space py-4">
+  <RouterLink to="/" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Home</RouterLink>
+  <RouterLink to="/about" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">About</RouterLink>
+  <RouterLink to="/experience" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Work Experience</RouterLink>
+  <RouterLink to="/projects" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Projects</RouterLink>
+  <RouterLink to="/contact" class="text-gray-800 hover:text-gray-500" active-class="active-link" exact-active-class="exact-active-link">Contact</RouterLink>
+</nav>
     </header>
-    <main class="pt-20">
+    <main class="pt-20 flex-1">
       <div class="text-center">
-        <img alt="Aditi Anand picture" class="mx-auto mb-8" src="@/assets/me.png" width="325" height="325" />
+        <img alt="Aditi Anand picture" class="mx-auto mb-8" src="@/assets/me.png" width="400" height="325" />
         <div class="wrapper mx-auto max-w-4xl">
           <Base msg="Aditi Anand" />
         </div>
       </div>
       <RouterView />
     </main>
+    <footer class="bg-gray-800 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p class="text-sm">
+          &copy; {{ new Date().getFullYear() }} Aditi Anand. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -34,5 +42,13 @@ import Base from './components/Base.vue'
 
 .exact-active-link {
   color: #2d3748; /* Tailwind color: gray-800 */
+}
+
+/* Footer styles */
+footer {
+  background-color: #2d3748; /* Tailwind color: gray-800 */
+}
+.custom-space > *:not(:last-child) {
+  margin-right: 1.5rem; /* Adjust this value as needed */
 }
 </style>

@@ -2,16 +2,16 @@
 defineProps<{
   msg: string
 }>()
-import { portfolioContent } from '../../dist/assets/about';
+import {portfolioContent} from '../assets/about';
 const portfolio = portfolioContent;
 </script>
 
 <template>
   <div class="greetings">
     <h2 class="green font-mono">{{ msg }} | {{ portfolio.about.location }}</h2>
-    <h3>
+    <p>
       Turning coding chaos into smooth sailing, managing teams with style, and mentoring like it's a game show where everyone wins. What's next?
-    </h3>
+    </p>
   </div>
 </template>
 

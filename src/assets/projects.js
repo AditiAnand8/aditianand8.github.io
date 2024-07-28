@@ -80,7 +80,7 @@ export const portfolioContent = {
         ],
         technologies: 'ASP.NET, C#, MVC',
         logo: 'https://api.badgr.io/public/issuers/1MVJXHKTSAynJaw-J3yCGQ/image', 
-        url: 'https://example.com/passport' 
+        url: '' 
       },
       {
         name: 'Forecast',
@@ -93,8 +93,8 @@ export const portfolioContent = {
           'Worked on delivery, testing, and communication for effective adoption.'
         ],
         technologies: 'ASP.NET, C#, MVC',
-        logo: 'https://example.com/passport-logo.png', 
-        url: 'https://example.com/passport' 
+        logo: '', 
+        url: '' 
       },
  
     {
@@ -167,8 +167,8 @@ export const portfolioContent = {
           'Utilized Unity 3D, Openvibe, Middle VR, Oculus Rift, and Emotiv headset.'
         ],
         technologies: 'Unity 3D, Openvibe, Middle VR, Oculus Rift, Emotiv headset',
-        logo: 'https://example.com/brain-computer-interface-logo.png', // Replace with actual URL
-        url: 'https://example.com/brain-computer-interface' // Replace with actual URL
+        logo: '', // Replace with actual URL
+        url: '' // Replace with actual URL
       },
       {
         name: 'Undergrad Research: Particle Swarm Optimization',
@@ -178,8 +178,8 @@ export const portfolioContent = {
           'Developed a C++ program to demonstrate and understand Particle Swarm Optimization techniques.'
         ],
         technologies: 'C++, Particle Swarm Optimization',
-        logo: 'https://example.com/particle-swarm-optimization-logo.png', // Replace with actual URL
-        url: 'https://example.com/particle-swarm-optimization' // Replace with actual URL
+        logo: '', // Replace with actual URL
+        url: '' // Replace with actual URL
       },
   ]
 }

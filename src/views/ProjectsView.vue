@@ -1,29 +1,39 @@
 <template>
-  <div class="about">
-   
+  <div class="max-w-4xl mx-auto p-6">
     <section class="education mb-8">
-      <h2 class="text-2xl font-bold mb-4">Projects & Research</h2>
-      <div v-for="edu in portfolio.projects" :key="edu.degree" class="flex items-center mb-6">
-        <img :src="edu.logo" alt="Institution Logo" class="w-20 h-20 object-contain mr-4" />
+      <h2 class="text-2xl font-bold mb-6 text-green-700">Projects</h2>
+      <div v-for="edu in portfolio.projects" :key="edu.name" class="flex items-start mb-8">
+        <img v-if="edu.logo" :src="edu.logo" alt="Project Logo" class="w-20 h-20 object-contain mr-4" />
         <div>
-          <h3 class="text-xl font-semibold">{{ edu.name }} - ({{ edu.year }})</h3>
+          <h3 class="text-xl font-semibold text-green-800">
+            {{ edu.name }} - ({{ edu.year }})
+          </h3>
           <p class="text-gray-700">Description: {{ edu.description }}</p>
-          <ul v-for="contribution in edu.contributions">
-            <li>{{ contribution }}</li>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li v-for="contribution in edu.contributions" :key="contribution">{{ contribution }}</li>
           </ul>
-          <a :href="edu.url" target="_blank" class="text-blue-500 hover:underline">Learn More</a>
+          <a v-if="edu.url" :href="edu.url" target="_blank" class="text-green-600 hover:text-green-800 hover:underline mt-2 block">
+            Learn More
+          </a>
         </div>
       </div>
     </section>
-    <br/>
-    <section class="education mb-8">
-      <h2 class="text-2xl font-bold mb-4">Research</h2>
-      <div v-for="cert in portfolio.research" :key="cert.title" class="flex items-center mb-6">
-        <img :src="cert.logo" alt="Certification Logo" class="w-20 h-20 object-contain mr-4" />
+
+    <section class="education">
+      <h2 class="text-2xl font-bold mb-6 text-green-700">Research</h2>
+      <div v-for="cert in portfolio.research" :key="cert.title" class="flex items-start mb-8">
+        <img v-if="cert.logo" :src="cert.logo" alt="Certification Logo" class="w-20 h-20 object-contain mr-4" />
         <div>
-          <h3 class="text-xl font-semibold">{{ cert.name }}</h3>
-          <p class="text-gray-700">{{ cert.institution }} ({{ cert.year }})</p>
-          <a class="text-blue-500 hover:underline" :href="cert.url" target="_blank">View Certification</a>
+          <h3 class="text-xl font-semibold text-green-800">
+            {{ cert.name }} - ({{ cert.year }})
+          </h3>
+          <p class="text-gray-700">Description: {{ cert.description }}</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li v-for="contribution in cert.contributions" :key="contribution">{{ contribution }}</li>
+          </ul>
+          <a v-if="cert.url" :href="cert.url" target="_blank" class="text-green-600 hover:text-green-800 hover:underline mt-2 block">
+            Learn More
+          </a>
         </div>
       </div>
     </section>
@@ -35,3 +45,6 @@ import { portfolioContent } from '../assets/projects';
 const portfolio = portfolioContent;
 </script>
 
+<style scoped>
+/* Optional: Additional styles can go here */
+</style>
