@@ -13,7 +13,10 @@
 
       <main class="flex justify-center space-x-6">
         <!-- Github -->
-        <a href="https://github.com/AditiAnand8" class="transition-transform transform hover:scale-110">
+        <a
+          href="https://github.com/AditiAnand8"
+          class="transition-transform transform hover:scale-110"
+        >
           <span class="[&>svg]:h-12 [&>svg]:w-12 [&>svg]:fill-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
               <path
@@ -24,7 +27,10 @@
         </a>
 
         <!-- Instagram -->
-        <a href="https://www.instagram.com/aditi.anandm?igsh=MTVhejhkajhoaGx0cg%3D%3D&utm_source=qr" class="transition-transform transform hover:scale-110">
+        <a
+          href="https://www.instagram.com/aditi.anandm?igsh=MTVhejhkajhoaGx0cg%3D%3D&utm_source=qr"
+          class="transition-transform transform hover:scale-110"
+        >
           <span class="[&>svg]:h-12 [&>svg]:w-12 [&>svg]:fill-[#c13584]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
@@ -35,7 +41,10 @@
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/aditianand1" class="transition-transform transform hover:scale-110">
+        <a
+          href="https://www.linkedin.com/in/aditi-anandm/"
+          class="transition-transform transform hover:scale-110"
+        >
           <span class="[&>svg]:h-12 [&>svg]:w-12 [&>svg]:fill-[#0077b5]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
@@ -45,8 +54,11 @@
           </span>
         </a>
 
-           <!-- Google -->
-           <a href= "mailto: anand.aditim@gmail.com" class="transition-transform transform hover:scale-110">
+        <!-- Google -->
+        <a
+          href="mailto: anand.aditim@gmail.com"
+          class="transition-transform transform hover:scale-110"
+        >
           <span class="[&>svg]:h-11 [&>svg]:w-11 [&>svg]:fill-[#ea4335]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
               <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -57,9 +69,11 @@
           </span>
         </a>
 
-
         <!-- Stack overflow -->
-        <a href="https://stackoverflow.com/users/11080771/power-coder?tab=profile" class="transition-transform transform hover:scale-110">
+        <a
+          href="https://stackoverflow.com/users/11080771/power-coder?tab=profile"
+          class="transition-transform transform hover:scale-110"
+        >
           <span class="[&>svg]:h-11 [&>svg]:w-11 [&>svg]:fill-[#f48024]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
               <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
@@ -69,7 +83,6 @@
             </svg>
           </span>
         </a>
-        
       </main>
     </div>
   </div>

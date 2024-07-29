@@ -3,15 +3,18 @@ defineProps<{
   msg: string
 }>()
 // @ts-ignore
-import {portfolioContent} from '../assets/about';
-const portfolio = portfolioContent;
+//import { portfolioContent } from '../assets/about'
+import { portfolioContent } from '../../dist/assets/AboutView-mXZQORfk'
+
+const portfolio = portfolioContent
 </script>
 
 <template>
   <div class="greetings">
     <h2 class="green font-mono">{{ msg }} | {{ portfolio.about.location }}</h2>
     <p>
-      Turning coding chaos into smooth sailing, managing teams with style, and mentoring like it's a game show where everyone wins. What's next?
+      Turning coding chaos into smooth sailing, managing teams with style, and mentoring like it's a
+      game show where everyone wins. What's next?
     </p>
   </div>
 </template>

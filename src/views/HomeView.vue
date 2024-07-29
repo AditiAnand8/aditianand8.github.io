@@ -8,7 +8,6 @@ const portfolioExperiences = experiences
 <template>
   <main class="max-w-4xl mx-auto p-6">
     <!-- <TheWelcome /> -->
-
   </main>
 </template>
 

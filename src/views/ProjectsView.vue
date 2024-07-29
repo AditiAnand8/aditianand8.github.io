@@ -66,8 +66,8 @@
 
 <script setup lang="ts">
 // @ts-ignore
-// import { portfolioContent } from '../assets/projects'
-import { portfolioContent } from '../../dist/assets/ProjectsView-BuGCyIOM'
+//import { portfolioContent } from '../assets/projects'
+import { portfolioContent } from '../../dist/assets/ProjectsView-Cc7wdKlk'
 const portfolio = portfolioContent
 </script>
 
