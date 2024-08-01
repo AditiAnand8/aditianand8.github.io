@@ -2,41 +2,48 @@
 import TheWelcome from '../components/TheWelcome.vue'
 // @ts-ignore
 //import { experiences } from '../assets/experience'
-import { experiences } from '../../dist/assets/WorkExperienceView-DZj50U47'
+import { experiences } from '../../dist/assets/WorkExperienceView-B6OgyNfb'
 const portfolioExperiences = experiences
 </script>
 
 <template>
-  <main class="max-w-4xl mx-auto p-6">
+  <main class="max-w-6xl mx-auto p-6 lg:p-8">
     <section>
-      <h2 class="text-2xl font-bold mb-6 text-green-700">Work Experience</h2>
-      <div v-for="experience in portfolioExperiences" :key="experience.company" class="mb-8">
-        <div class="flex items-center mb-4">
+      <h2 class="text-3xl font-bold mb-8 text-green-800">Work Experience</h2>
+      <div
+        v-for="experience in portfolioExperiences"
+        :key="experience.company"
+        class="mb-10 border-b border-gray-200 pb-6"
+      >
+        <div class="flex items-start space-x-6 mb-6">
           <img
+            v-if="experience.logo"
             :src="experience.logo"
             alt="Institution Logo"
-            class="w-20 h-20 object-contain mr-4"
+            class="w-24 h-24 object-contain rounded-lg shadow-md"
           />
           <div>
-            <h3 class="text-xl font-semibold text-green-800">
-              {{ experience.company }} - ({{ experience.position }})
+            <h3 class="text-2xl font-semibold text-green-700 mb-2">
+              {{ experience.company }} -
+              <span class="text-green-600">({{ experience.position }})</span>
             </h3>
-            <p class="text-gray-700 text-sm">{{ experience.duration }}</p>
+            <p class="text-gray-600 text-sm mb-1">{{ experience.duration }}</p>
+            <p class="text-gray-600 text-sm mb-1">{{ experience.location }}</p>
+            <p class="text-gray-600 text-sm mb-2">{{ experience.type }}</p>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4 pl-5">
+              <li v-for="description in experience.description" :key="description">
+                {{ description }}
+              </li>
+            </ul>
+            <a
+              v-if="experience.url"
+              :href="experience.url"
+              target="_blank"
+              class="text-green-600 hover:text-green-800 hover:bg-green-100 hover:underline text-sm py-1 px-2 rounded transition-colors duration-300"
+            >
+              Learn More
+            </a>
           </div>
-        </div>
-        <div class="ml-24">
-          <ul class="list-disc list-inside space-y-2 text-gray-700">
-            <li v-for="description in experience.description" :key="description">
-              {{ description }}
-            </li>
-          </ul>
-          <a
-            :href="experience.url"
-            target="_blank"
-            class="block mt-4 text-green-600 hover:text-green-800 hover:underline"
-          >
-            Learn More
-          </a>
         </div>
       </div>
     </section>
@@ -45,4 +52,16 @@ const portfolioExperiences = experiences
 
 <style scoped>
 /* Optional: Additional styles can go here */
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(150, 7%, 65%, 0.2);
+  }
+}
 </style>

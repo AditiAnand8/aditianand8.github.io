@@ -28,7 +28,7 @@ export const portfolioContent = {
       ],
       technologies: 'Vue.js, Django, Database Automation',
       logo: 'https://atlas.ai.umich.edu/static/images/logo/atlas-favicon-32x32.png',
-      url: 'https://atlas.ai.umich.edu/' 
+      url: 'https://atlas.ai.umich.edu/'
     },
     {
       name: 'Tandem',
@@ -39,64 +39,64 @@ export const portfolioContent = {
         'Built and maintained the student audit system.'
       ],
       technologies: 'Nelnet, Payment Processing, Audit System',
-      logo: 'https://tandem.ai.umich.edu/static/img/favicon.c1184da7dac4.png', 
+      logo: 'https://tandem.ai.umich.edu/static/img/favicon.c1184da7dac4.png',
       url: 'https://tandem.ai.umich.edu/welcome'
     },
     {
-        name: 'Michigan Online',
-        description:
-          'An online learning tool created by the University of Michigan. Worked on adding features and fixing bugs using Django framework and Vue.js.',
-        contributions: [
-          'Added new features and fixed bugs in the application.',
-          'Utilized Django framework and Vue.js for development.'
-        ],
-        technologies: 'Django, Vue.js',
-        logo: 'https://online.umich.edu/static/img/favicons/favicon-196x196.png',
-        url: 'https://online.umich.edu/'
-      },
-      {
-        name: 'Replay',
-        description:
-          'A learning and e-portfolio system that uses digital badges to demonstrate user’s competencies and achievements. Users can show off badges earned through public profiles on Mozilla Backpack, LinkedIn, and Facebook.',
-        role: 'As the lead developer, implemented interactive course content and assignments, ensuring delivery and effective adoption. Worked on features like quizzes, video assignments, file uploads, and more.',
-        contributions: [
-          'Developed interactive course content and assignments.',
-          'Integrated digital badges and e-portfolio features.',
-          'Worked on delivery, testing, and communication for effective adoption.'
-        ],
-        technologies: 'ASP.NET, C#, MVC',
-        logo: 'https://replay-web.azureedge.net/static/media/replay-logo-large.9eac7f03.png', 
-        url: 'https://www.openreplay.org/login?returnUrl=/' 
-      },
-      {
-        name: 'Passport',
-        description:
-          'A learning and e-portfolio system that uses digital badges to demonstrate user’s competencies and achievements. Users can show off badges earned through public profiles on Mozilla Backpack, LinkedIn, and Facebook.',
-        role: 'As the lead developer, implemented interactive course content and assignments, ensuring delivery and effective adoption. Worked on features like quizzes, video assignments, file uploads, and more.',
-        contributions: [
-          'Developed interactive course content and assignments.',
-          'Integrated digital badges and e-portfolio features.',
-          'Worked on delivery, testing, and communication for effective adoption.'
-        ],
-        technologies: 'ASP.NET, C#, MVC',
-        logo: 'https://api.badgr.io/public/issuers/1MVJXHKTSAynJaw-J3yCGQ/image', 
-        url: '' 
-      },
-      {
-        name: 'Forecast',
-        description:
-          'A learning and e-portfolio system that uses digital badges to demonstrate user’s competencies and achievements. Users can show off badges earned through public profiles on Mozilla Backpack, LinkedIn, and Facebook.',
-        role: 'As the lead developer, implemented interactive course content and assignments, ensuring delivery and effective adoption. Worked on features like quizzes, video assignments, file uploads, and more.',
-        contributions: [
-          'Developed interactive course content and assignments.',
-          'Integrated digital badges and e-portfolio features.',
-          'Worked on delivery, testing, and communication for effective adoption.'
-        ],
-        technologies: 'ASP.NET, C#, MVC',
-        logo: '', 
-        url: '' 
-      },
- 
+      name: 'Michigan Online',
+      description:
+        'An online learning tool created by the University of Michigan. Worked on adding features and fixing bugs using Django framework and Vue.js.',
+      contributions: [
+        'Added new features and fixed bugs in the application.',
+        'Utilized Django framework and Vue.js for development.'
+      ],
+      technologies: 'Django, Vue.js',
+      logo: 'https://online.umich.edu/static/img/favicons/favicon-196x196.png',
+      url: 'https://online.umich.edu/'
+    },
+    {
+      name: 'Replay',
+      description:
+        'Replay is a web app designed to provide learners with a game-like interface for low-stakes quizzes in order to reinforce course objectives. The app allows learners to “play the game” – i.e. take a quiz – as many times as the instructor allows, building experience points as well as reinforcing the material. As a learning tool, Replay uses some of the characteristics of games – like tallying scores on an anonymous leaderboard for the whole class to see and allowing players to earn different achievements – giving learners a sense of competitiveness and achievement. ',
+      role: 'As the lead developer, implemented interactive course content and assignments, ensuring delivery and effective adoption. Worked on features like quizzes, video assignments, file uploads, and more.',
+      contributions: [
+        'Initial Development and Brainstorming: Participated in early brainstorming sessions and development phases, shaping the app based on market requirements.',
+        'Admin Features: Developed the admin side of the application, allowing professors and admins to create and import multimedia quizzes using Word, CSV, or QTI formats.',
+        'Gamification: Contributed to the gamification aspects of the app, including user avatar creation and performance comparison features for learners to compare their progress with peers.',
+        'Dashboard Development: Created a dashboard to support gamification features and track user performance.'
+      ],
+      technologies: 'React and Redux, C# REST API, MySQL and Entity Framework',
+      logo: 'https://replay-web.azureedge.net/static/media/replay-logo-large.9eac7f03.png',
+      url: 'https://www.openreplay.org/login?returnUrl=/'
+    },
+    {
+      name: 'Passport',
+      description:
+        'A learning and e-portfolio system that uses digital badges to demonstrate user’s competencies and achievements. Users can show off badges earned through public profiles on Mozilla Backpack, LinkedIn, and Facebook.',
+      role: 'As the lead developer, implemented interactive course content and assignments, ensuring delivery and effective adoption. Worked on features like quizzes, video assignments, file uploads, and more.',
+      contributions: [
+        'Developed interactive course content and assignments.',
+        'Integrated digital badges and e-portfolio features.',
+        'Worked on delivery, testing, and communication for effective adoption.'
+      ],
+      technologies: 'ASP.NET, C#, MVC',
+      logo: 'https://api.badgr.io/public/issuers/1MVJXHKTSAynJaw-J3yCGQ/image',
+      url: ''
+    },
+    {
+      name: 'Forecast',
+      company: 'Purdue University',
+      contributions: [
+        'Developed "Forecast," a personal data management tool for students at Purdue University, designed to help them understand and optimize their academic journey.',
+        'Implemented features such as class schedule management, GPA tracking, timely registration alerts, network activity analysis, and course challenge assessment.',
+        'Utilized React and Redux for dynamic user interfaces and state management, with backend development in C# and deployment using Visual Studio.'
+      ],
+      technologies: ['React', 'Redux', 'Visual Studio', 'C#'],
+      description:
+        'The platform offers a comprehensive suite of tools designed to enhance your academic experience. You can manage and view your class timetable with ease, while also tracking and monitoring your average semester GPA across various terms. Stay on top of your academic commitments with timely reminders for course registration. Analyze your network activity to understand interactions within the academic community and assess how course difficulty impacts your GPA. Predict potential outcomes for your courses with the course forecast feature and track your attendance and punctuality to manage late arrivals effectively. Monitor your attendance records, evaluate course challenge levels, and understand the overall challenge of your semester. Additionally, gain valuable insights into your standing within your major to better navigate your academic path.',
+      logo: '',
+      url: ''
+    },
     {
       name: 'Dashboard for GitHub',
       description:
@@ -106,8 +106,8 @@ export const portfolioContent = {
         'Integrated GitHub APIs to display relevant metrics and summaries.'
       ],
       technologies: 'Angular.js, GitHub API',
-      logo: '', 
-      url: '' 
+      logo: '',
+      url: ''
     },
     {
       name: 'Paint Brush',
@@ -116,8 +116,8 @@ export const portfolioContent = {
         'Developed a paintbrush application to create and visualize fractals using OpenGL and C++.'
       ],
       technologies: 'OpenGL, C++',
-      logo: '', 
-      url: '' 
+      logo: '',
+      url: ''
     },
     {
       name: 'High School Data Analyzer',
@@ -128,8 +128,8 @@ export const portfolioContent = {
         'Utilized Python pandas for data analysis and visualization.'
       ],
       technologies: 'Python, pandas',
-      logo: '', 
-      url: '' 
+      logo: '',
+      url: ''
     },
     {
       name: 'Tours and Travel Management',
@@ -140,8 +140,8 @@ export const portfolioContent = {
         'Utilized Microsoft .NET Framework, C#, HTML, and CSS.'
       ],
       technologies: 'Microsoft .NET Framework, C#, HTML, CSS',
-      logo: '', 
-      url: '' 
+      logo: '',
+      url: ''
     },
     {
       name: 'Study Buddy',
@@ -152,34 +152,34 @@ export const portfolioContent = {
         'Utilized React.js for the front end, Node.js for the backend, and MySQL for database management.'
       ],
       technologies: 'React.js, Node.js, MySQL',
-      logo: '', 
+      logo: '',
       url: ''
     }
   ],
 
   research: [
     {
-        name: 'Brain-Computer Interface in Virtual Reality',
-        description:
-          'Navigation in a 3D virtual environment using a Brain-Computer Interface with tools like Unity 3D, Openvibe, Middle VR, Oculus Rift, and Emotiv headset.',
-        contributions: [
-          'Developed an interface for navigating a 3-dimensional virtual environment using brain signals.',
-          'Utilized Unity 3D, Openvibe, Middle VR, Oculus Rift, and Emotiv headset.'
-        ],
-        technologies: 'Unity 3D, Openvibe, Middle VR, Oculus Rift, Emotiv headset',
-        logo: '', // Replace with actual URL
-        url: '' // Replace with actual URL
-      },
-      {
-        name: 'Undergrad Research: Particle Swarm Optimization',
-        description:
-          'Created a small program in C++ to understand Particle Swarm Optimization, a computational method that optimizes a problem by iteratively improving candidate solutions based on quality measures.',
-        contributions: [
-          'Developed a C++ program to demonstrate and understand Particle Swarm Optimization techniques.'
-        ],
-        technologies: 'C++, Particle Swarm Optimization',
-        logo: '', // Replace with actual URL
-        url: '' // Replace with actual URL
-      },
+      name: 'Brain-Computer Interface in Virtual Reality',
+      description:
+        'Navigation in a 3D virtual environment using a Brain-Computer Interface with tools like Unity 3D, Openvibe, Middle VR, Oculus Rift, and Emotiv headset.',
+      contributions: [
+        'Developed an interface for navigating a 3-dimensional virtual environment using brain signals.',
+        'Utilized Unity 3D, Openvibe, Middle VR, Oculus Rift, and Emotiv headset.'
+      ],
+      technologies: 'Unity 3D, Openvibe, Middle VR, Oculus Rift, Emotiv headset',
+      logo: '', // Replace with actual URL
+      url: '' // Replace with actual URL
+    },
+    {
+      name: 'Undergrad Research: Particle Swarm Optimization',
+      description:
+        'Created a small program in C++ to understand Particle Swarm Optimization, a computational method that optimizes a problem by iteratively improving candidate solutions based on quality measures.',
+      contributions: [
+        'Developed a C++ program to demonstrate and understand Particle Swarm Optimization techniques.'
+      ],
+      technologies: 'C++, Particle Swarm Optimization',
+      logo: '', // Replace with actual URL
+      url: '' // Replace with actual URL
+    }
   ]
 }
