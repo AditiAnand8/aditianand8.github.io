@@ -2,7 +2,7 @@
 import TheWelcome from '../components/TheWelcome.vue'
 // @ts-ignore
 //import { experiences } from '../assets/experience'
-import { experiences } from '../../dist/assets/WorkExperienceView-B6OgyNfb'
+import { experiences } from '../../dist/assets/WorkExperienceView-B6OgyNfb-C3D0CM75'
 const portfolioExperiences = experiences
 </script>
 
