@@ -49,7 +49,7 @@
 <script setup lang="ts">
 // @ts-ignore
 //import { portfolioContent } from '../assets/about'
-import { portfolioContent } from '../../dist/assets/AboutView-wHUNuzWx-CsbIC1yI'
+import { portfolioContent } from '../../dist/assets/AboutView-wHUNuzWx-CsbIC1yI-B2UoFpJl'
 const portfolio = portfolioContent
 </script>
 
