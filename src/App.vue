@@ -49,7 +49,7 @@ import Base from './components/Base.vue'
         <img
           alt="Aditi Anand picture"
           class="mx-auto mb-8"
-          src="@/assets/me.png"
+          src="@/assets/me-DyFzbGyN-DyFzbGyN-DyFzbGyN-DyFzbGyN.png"
           width="400"
           height="325"
         />

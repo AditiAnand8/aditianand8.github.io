@@ -4,7 +4,7 @@ defineProps<{
 }>()
 // @ts-ignore
 //import { portfolioContent } from '../assets/about'
-import { portfolioContent } from '../../dist/assets/AboutView-wHUNuzWx-CsbIC1yI-B2UoFpJl'
+import { portfolioContent } from '../../dist/assets/AboutView-wHUNuzWx-CsbIC1yI-B2UoFpJl-GIkKwYFq'
 
 const portfolio = portfolioContent
 </script>
