@@ -1,6 +1,77 @@
-# vue-project
+# Portfolio Project
 
-This template should help get you started developing with Vue 3 in Vite.
+My personal portfolio website built with Vue 3 and Vite, showcasing my projects and professional experience.
+
+## 🌐 Live Demo
+
+This project is automatically deployed via GitHub Pages at:(https://aditianand8.github.io)
+
+## 🛠️ Built With
+
+- Vue 3
+- TypeScript
+- Vite
+- [Add any other major technologies you're using]
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/AditiAnand8/vue-project.git
+```
+
+2. Install dependencies
+
+```sh
+npm install
+```
+
+### Development
+
+Run the development server:
+
+```sh
+npm run dev
+```
+
+### Production Build
+
+Build for production:
+
+```sh
+npm run build
+```
+
+### Linting
+
+```sh
+npm run lint
+```
+
+## 📝 Project Structure
+
+[Optional: Add a brief description of your project's main features or structure]
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but if you notice any bugs or have suggestions, feel free to open an issue!
+
+## 📫 Contact
+
+- GitHub: [@AditiAnand8](https://github.com/AditiAnand8)
+  [Add any additional contact information or social media links]
+
+## 📄 License
+
+[Add your license information if applicable]
 
 ## Recommended IDE Setup
 
@@ -13,27 +84,3 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
