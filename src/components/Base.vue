@@ -13,7 +13,7 @@ const portfolio = portfolioContent
     <h2 class="green font-mono">{{ msg }} | {{ portfolio.about.location }}</h2>
     <p>
       I'm a software engineer with a passion for building innovative solutions that
-      make a difference. I'm currently working at Rivian as a Software Engineer.
+      make a difference. I'm currently working at Rivian as a Senior Software Engineer.
       I'm a quick learner and I'm always looking to improve my skills.
     </p>
   </div>
