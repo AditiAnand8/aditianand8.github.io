@@ -12,8 +12,9 @@ const portfolio = portfolioContent
   <div class="greetings">
     <h2 class="green font-mono">{{ msg }} | {{ portfolio.about.location }}</h2>
     <p>
-      Turning coding chaos into smooth sailing, managing teams with style, and mentoring like it's a
-      game show where everyone wins. What's next?
+      I'm a software engineer with a passion for building innovative solutions that
+      make a difference. I'm currently working at Rivian as a Software Engineer.
+      I'm a quick learner and I'm always looking to improve my skills.
     </p>
   </div>
 </template>
