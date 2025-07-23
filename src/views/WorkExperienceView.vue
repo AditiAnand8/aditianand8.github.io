@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import TheWelcome from '../components/TheWelcome.vue'
 //@ts-ignore
-//import { experiences } from '../assets/experience'
-import { experiences } from '../../dist/assets/WorkExperienceView-BMsvl__l'
+import { experiences } from '../assets/experience'
+//import { experiences } from '../../dist/assets/WorkExperienceView-BMsvl__l'
 const portfolioExperiences = experiences
 </script>
 

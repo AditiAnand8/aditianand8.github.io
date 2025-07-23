@@ -1,10 +1,28 @@
 // experience.js
 export const experiences = [
   {
+    company: 'Rivian',
+    location: 'Plymouth, MI',
+    position: 'Senior Software Engineer',
+    duration: 'June 2025 – Present',
+    type: 'Full-time',
+    description: [
+      'Electric Vehicle Software Development: Contributing to the development of cutting-edge software systems for electric vehicles, focusing on vehicle connectivity, user experience, and performance optimization.',
+      'Full-Stack Development: Leveraging expertise in modern software development practices, including cloud deployment, CI/CD pipelines, and scalable architecture for automotive applications.',
+      'Technical Leadership: Leading development initiatives for vehicle software systems, collaborating with cross-functional teams to deliver innovative solutions that enhance the driving experience.',
+      'Software Architecture: Designing and implementing robust software solutions for electric vehicle platforms, ensuring reliability, safety, and performance in automotive environments.',
+      'Innovation and R&D: Participating in research and development efforts to advance electric vehicle technology and software capabilities.',
+      'Team Collaboration: Working closely with engineers, designers, and product teams to translate requirements into high-quality software solutions.',
+      'Performance Optimization: Focusing on optimizing software performance for automotive applications, ensuring efficient resource utilization and responsive user interfaces.'
+    ],
+    logo: 'https://rivian.com/favicon.ico',
+    url: 'https://rivian.com/'
+  },
+  {
     company: 'University of Michigan',
     location: 'Ann Arbor, MI',
     position: 'Senior Software Engineer',
-    duration: 'September 2019 – Present',
+    duration: 'September 2019 – June 2025',
     type: 'Full-time',
     description: [
       'Full-Stack Development: Demonstrated proficiency in the entire software development lifecycle, encompassing version control (git), CI/CD pipelines, testing, and regional cloud deployment, as well as building and consuming RESTful web services.',

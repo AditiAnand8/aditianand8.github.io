@@ -3,8 +3,7 @@ defineProps<{
   msg: string
 }>()
 // @ts-ignore
-//import { portfolioContent } from '../assets/about'
-import { portfolioContent } from '../../dist/assets/AboutView-BdmOx--Y'
+import { portfolioContent } from '../assets/about'
 
 const portfolio = portfolioContent
 </script>
