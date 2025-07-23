@@ -1,45 +1,90 @@
 <template>
-  <div class="about max-w-4xl mx-auto p-6">
-    <!-- <p class="text-lg text-gray-700 mb-6">{{ portfolio.about.professionalSummary }}</p> -->
-
-    <section class="skills mb-12">
-      <h2 class="text-2xl font-bold mb-6 text-green-700">Skills</h2>
-      <div v-for="skill in portfolio.skills" :key="skill.title" class="mb-4">
-        <h3 class="text-xl font-semibold text-gray-800">{{ skill.title }}</h3>
-        <div class="text-gray-700 flex flex-wrap">
-          <span
-            v-for="val in skill.values"
-            :key="val"
-            class="bg-green-100 text-green-800 py-1 px-3 rounded-full mr-2 mb-2"
-          >
-            {{ val }}
-          </span>
+  <div class="about max-w-6xl mx-auto p-6 lg:p-8">
+    <!-- Education Section -->
+    <section class="education mb-16">
+      <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text text-transparent">
+        Education
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div 
+          v-for="edu in portfolio.education" 
+          :key="edu.degree" 
+          class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 p-6 flex items-start"
+        >
+          <div class="w-20 h-20 rounded-lg shadow-md overflow-hidden mr-6 flex-shrink-0">
+            <img :src="edu.logo" alt="Institution Logo" class="w-full h-full object-contain bg-white" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ edu.degree }}</h3>
+            <p class="text-gray-600 mb-3">{{ edu.institution }} ({{ edu.year }})</p>
+            <a 
+              :href="edu.url" 
+              target="_blank" 
+              class="inline-flex items-center text-slate-600 hover:text-slate-800 font-medium transition-colors duration-300"
+            >
+              Learn More
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="education mb-12">
-      <h2 class="text-2xl font-bold mb-6 text-green-700">Education</h2>
-      <div v-for="edu in portfolio.education" :key="edu.degree" class="flex items-center mb-6">
-        <img :src="edu.logo" alt="Institution Logo" class="w-20 h-20 object-contain mr-4" />
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800">{{ edu.degree }}</h3>
-          <p class="text-gray-700">{{ edu.institution }} ({{ edu.year }})</p>
-          <a :href="edu.url" target="_blank" class="text-green-500 hover:underline">Learn More</a>
+    <!-- Certifications Section -->
+    <section class="certifications mb-16">
+      <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-slate-700 to-gray-700 bg-clip-text text-transparent">
+        Certifications
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div 
+          v-for="cert in portfolio.certification" 
+          :key="cert.title" 
+          class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 p-6 flex items-start"
+        >
+          <div class="w-20 h-20 rounded-lg shadow-md overflow-hidden mr-6 flex-shrink-0">
+            <img :src="cert.logo" alt="Certification Logo" class="w-full h-full object-cover" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ cert.title }}</h3>
+            <p class="text-gray-600 mb-3">{{ cert.institution }} ({{ cert.year }})</p>
+            <a 
+              :href="cert.url" 
+              target="_blank" 
+              class="inline-flex items-center text-slate-600 hover:text-slate-800 font-medium transition-colors duration-300"
+            >
+              View Certification
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="certifications mb-12">
-      <h2 class="text-2xl font-bold mb-6 text-green-700">Certifications</h2>
-      <div v-for="cert in portfolio.certification" :key="cert.title" class="flex items-center mb-6">
-        <img :src="cert.logo" alt="Certification Logo" class="w-20 h-20 object-contain mr-4" />
-        <div>
-          <h3 class="text-xl font-semibold text-gray-800">{{ cert.title }}</h3>
-          <p class="text-gray-700">{{ cert.institution }} ({{ cert.year }})</p>
-          <a :href="cert.url" target="_blank" class="text-green-500 hover:underline"
-            >View Certification</a
-          >
+    <!-- Skills Section -->
+    <section class="skills mb-16">
+      <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-slate-700 to-gray-700 bg-clip-text text-transparent">
+        Skills
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          v-for="skill in portfolio.skills" 
+          :key="skill.title" 
+          class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 p-6"
+        >
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">{{ skill.title }}</h3>
+          <div class="flex flex-wrap gap-2">
+            <span
+              v-for="val in skill.values"
+              :key="val"
+              class="bg-gradient-to-r from-slate-600 to-gray-700 text-white py-2 px-4 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              {{ val }}
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -54,8 +99,31 @@ const portfolio = portfolioContent
 
 <style scoped>
 .about {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 1.5rem;
+  animation: fade-in 0.8s ease-out;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for cards */
+.skills > div > div:nth-child(1) { animation-delay: 0.1s; }
+.skills > div > div:nth-child(2) { animation-delay: 0.2s; }
+.skills > div > div:nth-child(3) { animation-delay: 0.3s; }
+.skills > div > div:nth-child(4) { animation-delay: 0.4s; }
+.skills > div > div:nth-child(5) { animation-delay: 0.5s; }
+.skills > div > div:nth-child(6) { animation-delay: 0.6s; }
+
+.education > div > div:nth-child(1) { animation-delay: 0.1s; }
+.education > div > div:nth-child(2) { animation-delay: 0.2s; }
+
+.certifications > div > div:nth-child(1) { animation-delay: 0.1s; }
+.certifications > div > div:nth-child(2) { animation-delay: 0.2s; }
 </style>

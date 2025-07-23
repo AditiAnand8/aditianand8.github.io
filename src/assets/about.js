@@ -12,9 +12,9 @@ export const portfolioContent = {
     My journey has taken me from Purdue University to New Century Software, 
     always focusing on enhancing code quality and optimizing performance.
     Beyond coding, I enjoy gaming and mentoring aspiring developers. 
-    With a Master’s in Computer Science and certifications in project management 
+    With a Master's in Computer Science and certifications in project management 
     and distributed SQL, I blend academic rigor with practical expertise. 
-    Let’s connect and create something amazing together!`,
+    Let's connect and create something amazing together!`,
     careerHighlights: [
       'Led the development of a scalable e-commerce platform handling over a million transactions per day.',
       'Spearheaded a social media project that supports real-time interactions and has over 10 million active users.',
@@ -24,11 +24,11 @@ export const portfolioContent = {
   },
   education: [
     {
-      degree: 'Bachelor of Engineering (BE) in Computer Science',
-      institution: 'University Institute of Technology, RGPV',
-      year: '2010',
-      logo: 'https://www.uitrgpv.ac.in/imagesN/rgpv-logo.jpg',
-      url: 'https://www.uitrgpv.ac.in/'
+      degree: 'Weekend MBA',
+      institution: 'Ross School of Business - University of Michigan',
+      year: '2025 - 2027',
+      logo: 'https://lh7-us.googleusercontent.com/uzC-g_HHg3WYnRQHEKrJ2Qkp4jzQfL72Di91WZiAEmWAN_Donub019AWIl4zZU4dEYkPOvi38mEFENlefh6dT3gLvA2eiazlbpk-N-FC5EJSH9kANuTAgjXxIBMxk_oj9ibumw6CIBhTIDEuypaE9gc',
+      url: 'https://michiganross.umich.edu/'
     },
     {
       degree: 'Master of Science (MS) in Computer Science',
@@ -36,7 +36,14 @@ export const portfolioContent = {
       year: '2014',
       logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8wESwKA05bc2F2g1EZQZ7-LNKRfMBKvh7FQ&s',
       url: 'http://uwyo.edu/'
-    }
+    },
+    {
+      degree: 'Bachelor of Engineering (BE) in Computer Science',
+      institution: 'University Institute of Technology, RGPV',
+      year: '2010',
+      logo: 'https://www.rgpv.ac.in/Images/RGPVLOGO.JPG',
+      url: 'https://www.uitrgpv.ac.in/'
+    },
   ],
   certification: [
     {
