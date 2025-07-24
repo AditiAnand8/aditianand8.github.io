@@ -45,14 +45,20 @@ const portfolio = portfolioContent
             <h2 class="text-lg font-semibold text-slate-800 tracking-tight">What's New</h2>
           </div>
           <div class="bg-gradient-to-r from-slate-50 to-gray-100 rounded-lg shadow-sm border border-slate-100 px-5 py-4">
-            <ul class="space-y-2">
+            <ul class="space-y-3">
               <li class="flex items-center text-base text-slate-700">
                 <span class="mr-3 text-xl">🚗</span>
-                <span>Started working at <span class="font-semibold text-slate-900">Rivian</span></span>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                  <span>Started working at <span class="font-semibold text-slate-900">Rivian</span></span>
+                  <span class="text-sm text-slate-500">• June 2025</span>
+                </div>
               </li>
               <li class="flex items-center text-base text-slate-700">
                 <span class="mr-3 text-xl">🎓</span>
-                <span>Started my <span class="font-semibold text-slate-900">MBA</span></span>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                  <span>Started my <span class="font-semibold text-slate-900">MBA</span> at <span class="font-semibold text-slate-900">University of Michigan Ross</span></span>
+                  <span class="text-sm text-slate-500">• May 2025</span>
+                </div>
               </li>
             </ul>
           </div>
