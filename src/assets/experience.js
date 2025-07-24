@@ -75,7 +75,7 @@ export const experiences = [
     location: 'Laramie, WY',
     position: 'Graduate Teaching Assistant',
     duration: 'August 2012 - May 2014',
-    type: 'Full-time',
+    type: 'Part-time',
     description: [
       'Academic Support: Assisted undergraduate students with programming in Java using Blue-J and grading Java projects in Eclipse for the Introduction to Object-oriented Programming course.',
       'Laboratory Supervision: Oversaw and managed laboratory sessions, supported faculty in grading assignments, and assisted students during office hours.'
@@ -88,7 +88,7 @@ export const experiences = [
     location: 'Laramie, WY',
     position: 'Graduate Research Assistant',
     duration: 'January 2012 - August 2012',
-    type: 'Full-time',
+    type: 'Part-time',
     description: [
       'Virtual Reality Research: Collaborated with a research team in a Virtual Reality lab, focusing on investigating different C++ functions related to the Virtual Reality User Interface (V.R.U.I.) and the V.R. Toolkit and collected and analyzed data for a bimanual application prototype.',
       'Immersive Experiences: Worked in a Virtual Reality lab dedicated to developing immersive experiences and exploring the impact of VR on human perception, cognition, and behavior.'
@@ -111,7 +111,7 @@ export const experiences = [
     location: 'Indore, India',
     position: 'Intern',
     duration: 'Jan 2011 to Dec 2012',
-    type: 'Full-time',
+    type: 'Part-time',
     description: [
       'Web Development with ASP.NET and HTML, CSS, and JavaScript for local buiness administrative webpages.'
     ],
