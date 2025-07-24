@@ -119,7 +119,7 @@
         <h3 class="text-lg font-semibold text-gray-800 mb-2">Blog</h3>
         <p class="text-sm text-gray-600 mb-4">Read my technical articles</p>
         <a
-          href="https://medium.com/@techVerses"
+          href="https://medium.com/@TechStacked"
           target="_blank"
           class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-slate-600 to-gray-700 text-white rounded-lg hover:from-slate-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg font-medium"
         >
