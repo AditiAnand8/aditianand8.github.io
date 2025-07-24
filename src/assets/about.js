@@ -24,7 +24,7 @@ export const portfolioContent = {
   },
   education: [
     {
-      degree: 'Weekend MBA',
+      degree: 'Master of Business Administration',
       institution: 'Ross School of Business - University of Michigan',
       year: '2025 - 2027',
       logo: 'https://lh7-us.googleusercontent.com/uzC-g_HHg3WYnRQHEKrJ2Qkp4jzQfL72Di91WZiAEmWAN_Donub019AWIl4zZU4dEYkPOvi38mEFENlefh6dT3gLvA2eiazlbpk-N-FC5EJSH9kANuTAgjXxIBMxk_oj9ibumw6CIBhTIDEuypaE9gc',
