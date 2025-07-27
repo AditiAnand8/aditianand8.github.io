@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import Base from './components/Base.vue'
+import SEO from './components/SEO.vue'
 
 const route = useRoute()
 </script>
 
 <template>
+  <SEO />
   <div class="w-full min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 relative overflow-hidden">
     <!-- Decorative bubbles below nav bar -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">

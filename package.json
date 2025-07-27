@@ -13,8 +13,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vueuse/head": "^2.0.0",
     "vue": "^3.4.29",
     "vue-gtag-next": "^1.14.0",
+    "vue-meta": "^3.0.0-alpha.2",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
