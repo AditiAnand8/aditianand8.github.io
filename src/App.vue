@@ -16,6 +16,18 @@ const pageLabel = computed(() => {
   }
   return map[route.path] || ''
 })
+
+const navItems = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/experience', label: 'Experience' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/contact', label: 'Contact' }
+]
+
+function isActive(path: string) {
+  return path === '/' ? route.path === '/' : route.path.startsWith(path)
+}
 </script>
 
 <template>
@@ -30,17 +42,21 @@ const pageLabel = computed(() => {
     </div>
 
     <!-- Header -->
-    <header class="backdrop-blur-xl bg-white/75 border-b border-slate-200/60 sticky top-0 w-full z-50">
-      <nav class="container mx-auto flex flex-wrap items-center justify-between gap-y-3 py-3.5 px-6">
-        <RouterLink to="/" class="font-display text-lg font-semibold text-slate-900 tracking-tight hover:text-slate-700 transition-colors">
+    <header class="site-header sticky top-0 w-full z-50">
+      <nav class="container mx-auto flex flex-wrap items-center justify-between gap-y-3 py-3 px-6">
+        <RouterLink to="/" class="brand-link">
           Aditi Anand
         </RouterLink>
-        <div class="flex flex-wrap justify-center gap-x-7 gap-y-2">
-          <RouterLink to="/" class="nav-link" active-class="nav-link-active" exact-active-class="nav-link-active">Home</RouterLink>
-          <RouterLink to="/about" class="nav-link" active-class="nav-link-active">About</RouterLink>
-          <RouterLink to="/experience" class="nav-link" active-class="nav-link-active">Experience</RouterLink>
-          <RouterLink to="/projects" class="nav-link" active-class="nav-link-active">Projects</RouterLink>
-          <RouterLink to="/contact" class="nav-link" active-class="nav-link-active">Contact</RouterLink>
+        <div class="nav-tray" role="navigation" aria-label="Primary">
+          <RouterLink
+            v-for="item in navItems"
+            :key="item.to"
+            :to="item.to"
+            class="nav-link"
+            :class="{ 'nav-link-active': isActive(item.to) }"
+          >
+            {{ item.label }}
+          </RouterLink>
         </div>
       </nav>
     </header>
@@ -123,40 +139,111 @@ const pageLabel = computed(() => {
     linear-gradient(165deg, #f8fafc 0%, #f1f5f9 45%, #e7e5e4 100%);
 }
 
-.nav-link {
-  position: relative;
-  padding: 0.35rem 0;
-  color: #64748b;
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.site-header {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: #334155;
-  transition: width 0.25s ease;
+.brand-link {
+  font-family: Fraunces, ui-serif, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  text-decoration: none;
+  transition: color 0.18s ease, opacity 0.18s ease;
+}
+
+.brand-link:hover {
+  color: #334155;
+}
+
+.brand-link:active {
+  opacity: 0.7;
+}
+
+.nav-tray {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.28rem;
+  border-radius: 0.9rem;
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03) inset;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.1rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.65rem;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.12s ease;
 }
 
 .nav-link:hover {
-  color: #1e293b;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.85);
 }
 
-.nav-link:hover::after,
-.nav-link-active::after {
-  width: 100%;
+.nav-link:active {
+  transform: scale(0.96);
+  background: rgba(226, 232, 240, 0.9);
+  color: #0f172a;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid #334155;
+  outline-offset: 2px;
 }
 
 .nav-link-active {
-  color: #0f172a;
+  color: #fff;
   font-weight: 600;
+  background: #0f172a;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 6px 14px rgba(15, 23, 42, 0.18);
+}
+
+.nav-link-active:hover {
+  color: #fff;
+  background: #1e293b;
+}
+
+.nav-link-active:active {
+  color: #fff;
+  background: #020617;
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+}
+
+@media (max-width: 640px) {
+  .nav-tray {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-link {
+    flex: 1 1 auto;
+    padding-inline: 0.65rem;
+    font-size: 0.8rem;
+  }
 }
 
 @keyframes drift {
