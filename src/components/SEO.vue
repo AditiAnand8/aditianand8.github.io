@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const props = withDefaults(defineProps<SEOProps>(), {
-  title: 'Aditi Anand - Software Developer & Portfolio',
-  description: 'Software developer portfolio showcasing projects, experience, and skills. Specializing in modern web development technologies.',
-  keywords: 'software developer, web development, portfolio, Vue.js, JavaScript, TypeScript, frontend developer',
+  title: 'Aditi Anand - Staff Software Engineer @ Rivian',
+  description: 'Staff Software Engineer at Rivian leading real-time replenishment platforms. Portfolio of experience across automotive manufacturing, higher education, and enterprise software.',
+  keywords: 'staff software engineer, Rivian, Python, Flask, Kafka, NATS, Vue.js, full stack, portfolio',
   image: '/og-image.jpg',
   url: 'https://your-domain.com',
   type: 'website'

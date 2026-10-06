@@ -1,5 +1,23 @@
 <template>
   <div class="about max-w-6xl mx-auto p-6 lg:p-8">
+    <!-- Awards Section -->
+    <section v-if="portfolio.awards?.length" class="awards mb-16">
+      <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text text-transparent">
+        Awards
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div
+          v-for="award in portfolio.awards"
+          :key="award.title"
+          class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 p-6"
+        >
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ award.title }}</h3>
+          <p class="text-gray-600 mb-2">{{ award.institution }} ({{ award.year }})</p>
+          <p v-if="award.description" class="text-sm text-gray-500">{{ award.description }}</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Education Section -->
     <section class="education mb-16">
       <h2 class="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-700 to-slate-700 bg-clip-text text-transparent">

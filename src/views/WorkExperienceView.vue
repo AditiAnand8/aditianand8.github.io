@@ -15,7 +15,7 @@ const portfolioExperiences = experiences
       <div class="space-y-8">
         <div
           v-for="experience in portfolioExperiences"
-          :key="experience.company"
+          :key="`${experience.company}-${experience.position}-${experience.duration}`"
           class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20 p-6"
         >
           <div class="flex items-start space-x-6 mb-6">

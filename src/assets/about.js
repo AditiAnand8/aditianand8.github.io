@@ -1,32 +1,25 @@
 export const portfolioContent = {
   about: {
     name: 'Aditi Anand',
-    title: 'Senior Software Engineer @ University of Michigan',
+    title: 'Staff Software Engineer @ Rivian',
     location: 'ANN ARBOR, MI, USA',
-    professionalSummary: `Hello! I'm Aditi Anand, a Senior Software Engineer who loves creating innovative, user-friendly applications. 
-    I enjoy building dynamic software solutions at the University of Michigan,
-     where I lead full-stack development, software architecture, and data-driven innovation 
-     using Python, C#, Java, JavaScript, and frameworks like Django, Flask, Vue, and React.
-    I've led impactful projects like Problem Roulette and Atlas, 
-    delivering valuable solutions to thousands of users. 
-    My journey has taken me from Purdue University to New Century Software, 
-    always focusing on enhancing code quality and optimizing performance.
-    Beyond coding, I enjoy gaming and mentoring aspiring developers. 
-    With a Master's in Computer Science and certifications in project management 
-    and distributed SQL, I blend academic rigor with practical expertise. 
-    Let's connect and create something amazing together!`,
+    professionalSummary: `Hello! I'm Aditi Anand, a Staff Software Engineer with 12+ years building and scaling production systems across automotive manufacturing, higher education, and enterprise software.
+    At Rivian, I lead a team of 3 engineers building the real-time replenishment platform for the R2 production program — a NATS-driven system that keeps every shop and assembly line supplied, integrated with SAP ERP.
+    I combine deep full-stack and cloud architecture experience with a track record of leading teams, mentoring engineers, and translating operational needs into multi-quarter technical strategy.
+    Previously at the University of Michigan, I was technical lead for platforms like Problem Roulette and Atlas serving 150K+ users annually.
+    I'm also pursuing an MBA at Michigan Ross. Let's connect and build something impactful together!`,
     careerHighlights: [
-      'Led the development of a scalable e-commerce platform handling over a million transactions per day.',
-      'Spearheaded a social media project that supports real-time interactions and has over 10 million active users.',
-      'Developed a custom content management system for a personal blog platform, enhancing user engagement by 40%.'
+      'Staff Software Engineer at Rivian leading the real-time replenishment platform for R2 production with 3 direct reports.',
+      'Reduced parts shortage incidents by 20% and improved supply chain system uptime to 99.9% as Senior Software Engineer at Rivian.',
+      'Technical lead for Problem Roulette, Atlas, and Michigan Online at U-M, serving 150K+ users annually.'
     ],
     personalInterests: `Outside of work, I enjoy contributing to open-source projects, exploring the latest in technology, and participating in hackathons. In my free time, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.`
   },
   education: [
     {
-      degree: 'Master of Business Administration',
+      degree: 'Master of Business Administration (Weekend MBA)',
       institution: 'Ross School of Business - University of Michigan',
-      year: '2025 - 2027',
+      year: 'May 2025 – May 2027 (expected)',
       logo: 'https://lh7-us.googleusercontent.com/uzC-g_HHg3WYnRQHEKrJ2Qkp4jzQfL72Di91WZiAEmWAN_Donub019AWIl4zZU4dEYkPOvi38mEFENlefh6dT3gLvA2eiazlbpk-N-FC5EJSH9kANuTAgjXxIBMxk_oj9ibumw6CIBhTIDEuypaE9gc',
       url: 'https://michiganross.umich.edu/'
     },
@@ -45,6 +38,15 @@ export const portfolioContent = {
       url: 'https://www.uitrgpv.ac.in/'
     },
   ],
+  awards: [
+    {
+      title: '2nd Place, Kellogg Design Challenge (KDC) 2026',
+      institution: 'Northwestern University, Kellogg School of Management',
+      year: '2026',
+      description:
+        'Global design and innovation case competition hosted by Kellogg’s Innovation and Design Association (IDEA).'
+    }
+  ],
   certification: [
     {
       title: 'Technical Management Institute, Mini-MBA',
@@ -52,13 +54,6 @@ export const portfolioContent = {
       year: '2020',
       logo: 'https://business.purdue.edu/includes/img/medsb_v-full-rgb.png',
       url: 'https://www.purdue.edu/'
-    },
-    {
-      title: 'Certified ScrumMaster (CSM)',
-      institution: 'Scrum Alliance',
-      year: '2018',
-      logo: 'https://www.scrumalliance.org/images/badgelibraryprovider/default-album/sa-csm-300.png?sfvrsn=92fdfd00_1',
-      url: ''
     },
     {
       title: 'Neo4j Certified Professional',
@@ -82,7 +77,7 @@ export const portfolioContent = {
       url: 'https://university.cockroachlabs.com/certificates/75c3f30b8bce435089d67de0f45aa615'
     },
     {
-      title: 'Graph Developer - Associate',
+      title: 'GraphQL Associate Developer',
       institution: 'Apollo',
       year: '2024',
       logo: 'https://res.cloudinary.com/apollographql/image/upload/v1632844693/badge_sfsiin.svg',
@@ -93,76 +88,99 @@ export const portfolioContent = {
   skills: [
     {
       title: 'Programming Languages',
-      values: ['Python', 'C#', 'Java', 'C++', 'JavaScript']
+      values: ['Python', 'C#', 'Java', 'C++', 'JavaScript', 'TypeScript', 'SQL']
     },
     {
       title: 'Frontend',
       values: [
-        'Vue',
+        'Vue 3',
         'Vuex',
         'React',
         'Redux',
-        'jQuery',
-        'D3',
-        'TypeScript',
+        'Next.js',
         'Tailwind CSS',
-        'HTML',
-        'CSS'
+        'D3.js',
+        'Chart.js',
+        'Webpack',
+        'Vite',
+        'Rollup'
       ]
     },
     {
       title: 'Backend',
-      values: ['Django', 'Flask', 'ASP.NET', 'Node', 'Spring']
+      values: [
+        'Django',
+        'Flask',
+        'FastAPI',
+        'Node.js',
+        'ASP.NET Core',
+        'Spring Boot',
+        'REST & GraphQL',
+        'WebSocket',
+        'Microservices',
+        'Kafka',
+        'NATS',
+        'Celery',
+        'Redis'
+      ]
+    },
+    {
+      title: 'Mobile',
+      values: ['React Native', 'Flutter', 'Quasar Framework']
     },
     {
       title: 'Databases',
-      values: ['SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Neo4j', 'Cockroach DB']
-    },
-    {
-      title: 'Distributed Computing',
       values: [
-        'Virtual Machines',
-        'Azure SQL Database',
-        'Azure Functions',
-        'AWS EC2',
-        'AWS S3',
-        'AWS Lambda',
-        'AWS RDS',
-        'OpenShift'
+        'PostgreSQL',
+        'SQL Server',
+        'MySQL',
+        'MongoDB',
+        'Redis',
+        'Neo4j',
+        'CockroachDB',
+        'Aurora',
+        'Pandas'
       ]
     },
     {
-      title: 'DevOps',
-      values: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Azure']
+      title: 'Cloud & DevOps',
+      values: [
+        'AWS',
+        'Azure',
+        'Kubernetes',
+        'OpenShift',
+        'Docker',
+        'Terraform',
+        'ArgoCD',
+        'Grafana',
+        'Prometheus',
+        'NGINX',
+        'CI/CD'
+      ]
     },
     {
-      title: 'Testing',
-      values: ['Unit Testing', 'Integration Testing', 'Test Automation', 'PyTest', 'PyUnit']
+      title: 'AI & ML',
+      values: ['OpenAI API', 'NLP', 'Chatbot Development', 'PyTorch', 'Scikit-learn']
     },
     {
-      title: 'Game Development',
-      values: ['Unity3D', 'OpenGL']
+      title: 'Security',
+      values: ['OAuth2', 'JWT', 'SSO', 'Shibboleth']
+    },
+    {
+      title: 'Practices',
+      values: [
+        'Distributed Systems',
+        'Event-Driven Design',
+        'Observability',
+        'Accessibility (WCAG)',
+        'Agile/Scrum',
+        'Unit & Integration Testing',
+        'Test Automation'
+      ]
     },
     {
       title: 'Other',
-      values: [
-        '.NET',
-        'WPF',
-        'MVC',
-        'Entity Framework',
-        'Microservices Architecture',
-        'API Design & Integration',
-        'Agile Methodologies',
-        'JSON',
-        'AJAX',
-        'WebSocket',
-        'GraphQL',
-        'Pandas',
-        'Webpack',
-        'Vite',
-        'Rollup',
-        'NGINX'
-      ]
+      values: ['.NET', 'WPF', 'Entity Framework', 'Unity3D', 'OpenGL']
     }
   ]
 }

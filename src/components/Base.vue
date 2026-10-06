@@ -29,7 +29,7 @@ const portfolio = portfolioContent
         <!-- Enhanced skill tags with better styling -->
         <div class="flex flex-wrap justify-center gap-4">
           <span class="px-6 py-3 bg-gradient-to-r from-slate-600 to-gray-700 text-white rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-slate-700 hover:to-gray-800">
-            Software Engineer
+            Staff Software Engineer
           </span>
           <span class="px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-gray-700 hover:to-gray-800">
             Rivian
@@ -49,15 +49,22 @@ const portfolio = portfolioContent
               <li class="flex items-center text-base text-slate-700">
                 <span class="mr-3 text-xl">🚗</span>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                  <span>Started working at <span class="font-semibold text-slate-900">Rivian</span></span>
-                  <span class="text-sm text-slate-500">• June 2025</span>
+                  <span>Promoted to <span class="font-semibold text-slate-900">Staff Software Engineer</span> at <span class="font-semibold text-slate-900">Rivian</span></span>
+                  <span class="text-sm text-slate-500">• September 2026</span>
+                </div>
+              </li>
+              <li class="flex items-center text-base text-slate-700">
+                <span class="mr-3 text-xl">🏆</span>
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
+                  <span><span class="font-semibold text-slate-900">2nd Place</span>, Kellogg Design Challenge</span>
+                  <span class="text-sm text-slate-500">• 2026</span>
                 </div>
               </li>
               <li class="flex items-center text-base text-slate-700">
                 <span class="mr-3 text-xl">🎓</span>
                 <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                  <span>Started my <span class="font-semibold text-slate-900">MBA</span> at <span class="font-semibold text-slate-900">University of Michigan Ross</span></span>
-                  <span class="text-sm text-slate-500">• May 2025</span>
+                  <span>Pursuing <span class="font-semibold text-slate-900">MBA</span> at <span class="font-semibold text-slate-900">University of Michigan Ross</span></span>
+                  <span class="text-sm text-slate-500">• May 2025 – May 2027</span>
                 </div>
               </li>
             </ul>
