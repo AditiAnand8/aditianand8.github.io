@@ -4,7 +4,7 @@ export const experiences = [
     company: 'Rivian',
     location: 'Plymouth, MI',
     position: 'Staff Software Engineer',
-    duration: 'September 2026 – Present',
+    duration: 'August 2026 – Present',
     type: 'Full-time',
     description: [
       'Technical Leadership: Technical lead with 3 direct reports for Rivian’s real-time replenishment platform — the system that keeps every shop and assembly line supplied across the R2 production program.',
@@ -23,7 +23,7 @@ export const experiences = [
     company: 'Rivian',
     location: 'Plymouth, MI',
     position: 'Senior Software Engineer',
-    duration: 'June 2025 – September 2026',
+    duration: 'June 2025 – August 2026',
     type: 'Full-time',
     description: [
       'Cross-Functional Leadership: Led a cross-functional team of 3 engineers, QA, and a product manager to build and maintain Rivian’s supply chain management applications, ensuring uninterrupted manufacturing operations.',

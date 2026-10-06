@@ -1,101 +1,87 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+import { RouterLink } from 'vue-router'
 // @ts-ignore
 import { portfolioContent } from '../assets/about'
 
+defineProps<{
+  msg: string
+}>()
+
 const portfolio = portfolioContent
+
+const updates = [
+  {
+    title: 'Promoted to Staff Software Engineer at Rivian',
+    detail: 'August 2026'
+  },
+  {
+    title: '2nd Place, Kellogg Design Challenge',
+    detail: '2026'
+  },
+  {
+    title: 'MBA at University of Michigan Ross',
+    detail: 'May 2025 – May 2027'
+  }
+]
 </script>
 
 <template>
-  <div class="greetings">
-    <!-- Enhanced heading with better typography -->
-    <div class="mb-8">
-      <h2 class="text-5xl font-bold bg-gradient-to-r from-slate-700 via-gray-700 to-slate-800 bg-clip-text text-transparent mb-4 animate-fade-in leading-tight">
-        {{ msg }}
-      </h2>
-      <div class="flex items-center justify-center gap-3 mb-6">
-        <div class="w-1 h-1 bg-slate-400 rounded-full"></div>
-        <span class="text-xl font-medium text-slate-600">{{ portfolio.about.location }}</span>
-        <div class="w-1 h-1 bg-slate-400 rounded-full"></div>
-      </div>
+  <div class="greetings text-center px-2">
+    <h1 class="font-display text-5xl md:text-6xl font-semibold tracking-tight text-slate-900 mb-3 animate-fade-in">
+      {{ msg }}
+    </h1>
+    <p class="text-lg md:text-xl text-slate-600 font-medium mb-1">
+      {{ portfolio.about.title }}
+    </p>
+    <p class="text-sm uppercase tracking-[0.18em] text-slate-400 mb-6">
+      {{ portfolio.about.location }}
+    </p>
+
+    <p class="max-w-2xl mx-auto text-slate-600 text-sm md:text-base leading-relaxed mb-8">
+      Staff engineer leading Rivian’s real-time replenishment platform — event-driven systems, team leadership, and production reliability at factory scale.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <RouterLink to="/experience" class="btn-primary">
+        View experience
+      </RouterLink>
+      <RouterLink
+        to="/contact"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-white/80 border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-white transition-colors"
+      >
+        Get in touch
+      </RouterLink>
     </div>
 
-    <!-- Enhanced content with better layout -->
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-gradient-to-r from-slate-50 to-gray-50 rounded-xl p-8 mb-8 border border-slate-200/50">
-        
-        <!-- Enhanced skill tags with better styling -->
-        <div class="flex flex-wrap justify-center gap-4">
-          <span class="px-6 py-3 bg-gradient-to-r from-slate-600 to-gray-700 text-white rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-slate-700 hover:to-gray-800">
-            Staff Software Engineer
-          </span>
-          <span class="px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-gray-700 hover:to-gray-800">
-            Rivian
-          </span>
-          <span class="px-6 py-3 bg-gradient-to-r from-zinc-600 to-zinc-700 text-white rounded-full text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:from-zinc-700 hover:to-zinc-800">
-            Full Stack
-          </span>
-        </div>
-        <hr class="my-6 border-t border-slate-200" />
-        <div class="mt-8">
-          <div class="flex items-center mb-3">
-            <span class="inline-block w-2 h-2 bg-gradient-to-r from-slate-500 to-slate-700 rounded-full mr-2"></span>
-            <h2 class="text-lg font-semibold text-slate-800 tracking-tight">What's New</h2>
-          </div>
-          <div class="bg-gradient-to-r from-slate-50 to-gray-100 rounded-lg shadow-sm border border-slate-100 px-5 py-4">
-            <ul class="space-y-3">
-              <li class="flex items-center text-base text-slate-700">
-                <span class="mr-3 text-xl">🚗</span>
-                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                  <span>Promoted to <span class="font-semibold text-slate-900">Staff Software Engineer</span> at <span class="font-semibold text-slate-900">Rivian</span></span>
-                  <span class="text-sm text-slate-500">• September 2026</span>
-                </div>
-              </li>
-              <li class="flex items-center text-base text-slate-700">
-                <span class="mr-3 text-xl">🏆</span>
-                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                  <span><span class="font-semibold text-slate-900">2nd Place</span>, Kellogg Design Challenge</span>
-                  <span class="text-sm text-slate-500">• 2026</span>
-                </div>
-              </li>
-              <li class="flex items-center text-base text-slate-700">
-                <span class="mr-3 text-xl">🎓</span>
-                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-                  <span>Pursuing <span class="font-semibold text-slate-900">MBA</span> at <span class="font-semibold text-slate-900">University of Michigan Ross</span></span>
-                  <span class="text-sm text-slate-500">• May 2025 – May 2027</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="text-left max-w-xl mx-auto">
+      <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-4">
+        What's New
+      </h2>
+      <ul class="space-y-0 border-l border-slate-300/80">
+        <li
+          v-for="(item, i) in updates"
+          :key="item.title"
+          class="update-row pl-5 py-3 relative"
+          :style="{ animationDelay: `${0.15 + i * 0.1}s` }"
+        >
+          <span class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-slate-700 ring-4 ring-slate-100"></span>
+          <p class="text-slate-800 font-medium leading-snug">{{ item.title }}</p>
+          <p class="text-sm text-slate-500 mt-0.5">{{ item.detail }}</p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <style scoped>
-.greetings {
-  text-align: center;
-  padding: 2rem 0;
+.update-row {
+  animation: fade-in 0.6s ease-out both;
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -104,16 +90,6 @@ const portfolio = portfolioContent
 }
 
 .animate-fade-in {
-  animation: fade-in 0.8s ease-out;
-}
-
-.animate-slide-up {
-  animation: slide-up 1s ease-out 0.3s both;
-}
-
-@media (min-width: 1404px) {
-  .greetings {
-    text-align: center;
-  }
+  animation: fade-in 0.7s ease-out;
 }
 </style>

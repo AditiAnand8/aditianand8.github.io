@@ -85,13 +85,46 @@ export const portfolioContent = {
     }
   ],
 
+  featuredSkills: [
+    'Python',
+    'Flask',
+    'Kafka',
+    'NATS',
+    'AWS',
+    'Vue 3',
+    'Aurora',
+    'Django',
+    'Distributed Systems',
+    'Event-Driven Design'
+  ],
   skills: [
     {
-      title: 'Programming Languages',
-      values: ['Python', 'C#', 'Java', 'C++', 'JavaScript', 'TypeScript', 'SQL']
+      title: 'Languages',
+      accent: 'slate',
+      values: ['Python', 'TypeScript', 'JavaScript', 'SQL', 'C#', 'Java', 'C++']
     },
     {
-      title: 'Frontend',
+      title: 'Backend & Messaging',
+      accent: 'emerald',
+      values: [
+        'Flask',
+        'Django',
+        'FastAPI',
+        'Kafka',
+        'NATS',
+        'Node.js',
+        'ASP.NET Core',
+        'Spring Boot',
+        'REST & GraphQL',
+        'WebSocket',
+        'Microservices',
+        'Celery',
+        'Redis'
+      ]
+    },
+    {
+      title: 'Frontend & Mobile',
+      accent: 'sky',
       values: [
         'Vue 3',
         'Vuex',
@@ -100,87 +133,62 @@ export const portfolioContent = {
         'Next.js',
         'Tailwind CSS',
         'D3.js',
-        'Chart.js',
-        'Webpack',
         'Vite',
-        'Rollup'
+        'React Native',
+        'Flutter',
+        'Quasar'
       ]
     },
     {
-      title: 'Backend',
-      values: [
-        'Django',
-        'Flask',
-        'FastAPI',
-        'Node.js',
-        'ASP.NET Core',
-        'Spring Boot',
-        'REST & GraphQL',
-        'WebSocket',
-        'Microservices',
-        'Kafka',
-        'NATS',
-        'Celery',
-        'Redis'
-      ]
-    },
-    {
-      title: 'Mobile',
-      values: ['React Native', 'Flutter', 'Quasar Framework']
-    },
-    {
-      title: 'Databases',
+      title: 'Data',
+      accent: 'amber',
       values: [
         'PostgreSQL',
+        'Aurora',
         'SQL Server',
         'MySQL',
         'MongoDB',
         'Redis',
         'Neo4j',
         'CockroachDB',
-        'Aurora',
         'Pandas'
       ]
     },
     {
       title: 'Cloud & DevOps',
+      accent: 'teal',
       values: [
         'AWS',
         'Azure',
+        'Docker',
         'Kubernetes',
         'OpenShift',
-        'Docker',
         'Terraform',
         'ArgoCD',
+        'CI/CD',
         'Grafana',
         'Prometheus',
-        'NGINX',
-        'CI/CD'
+        'NGINX'
       ]
     },
     {
-      title: 'AI & ML',
-      values: ['OpenAI API', 'NLP', 'Chatbot Development', 'PyTorch', 'Scikit-learn']
-    },
-    {
-      title: 'Security',
-      values: ['OAuth2', 'JWT', 'SSO', 'Shibboleth']
-    },
-    {
-      title: 'Practices',
+      title: 'AI, Security & Practices',
+      accent: 'rose',
       values: [
+        'OpenAI API',
+        'PyTorch',
+        'Scikit-learn',
+        'NLP',
+        'OAuth2',
+        'JWT',
+        'SSO',
         'Distributed Systems',
         'Event-Driven Design',
         'Observability',
         'Accessibility (WCAG)',
         'Agile/Scrum',
-        'Unit & Integration Testing',
         'Test Automation'
       ]
-    },
-    {
-      title: 'Other',
-      values: ['.NET', 'WPF', 'Entity Framework', 'Unity3D', 'OpenGL']
     }
   ]
 }

@@ -2,16 +2,51 @@
 
 #app {
   font-weight: normal;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  color: #1e293b;
 }
 
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: inherit;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(150, 7%, 65%, 0.2);
-  }
+/* Shared surface used across content pages */
+.surface-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.04);
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.surface-card:hover {
+  border-color: rgba(148, 163, 184, 0.7);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06), 0 16px 32px rgba(15, 23, 42, 0.06);
+}
+
+.section-title {
+  font-family: Fraunces, ui-serif, Georgia, serif;
+  font-weight: 650;
+  font-size: 1.875rem;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #1e293b;
+  color: #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #0f172a;
 }
