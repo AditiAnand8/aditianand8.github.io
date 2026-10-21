@@ -1,112 +1,190 @@
 <script setup lang="ts">
-import { onMounted, watch } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
+import {
+  SITE_NAME,
+  SITE_URL,
+  absoluteUrl,
+  defaultSeo,
+  type PageSeo
+} from '../seo/config'
 
 interface SEOProps {
   title?: string
   description?: string
   keywords?: string
   image?: string
-  url?: string
   type?: string
 }
 
 const props = withDefaults(defineProps<SEOProps>(), {
-  title: 'Aditi Anand - Staff Software Engineer @ Rivian',
-  description: 'Staff Software Engineer at Rivian leading real-time replenishment platforms. Portfolio of experience across automotive manufacturing, higher education, and enterprise software.',
-  keywords: 'staff software engineer, Rivian, Python, Flask, Kafka, NATS, Vue.js, full stack, portfolio',
-  image: '/og-image.jpg',
-  url: 'https://your-domain.com',
+  image: '/og-image.png',
   type: 'website'
 })
 
 const route = useRoute()
 
-const updateMetaTags = () => {
-  const baseUrl = 'https://your-domain.com'
-  const currentUrl = `${baseUrl}${route.path}`
-  
-  // Update document title
-  document.title = props.title
-  
-  // Update meta description
-  const descriptionMeta = document.querySelector('meta[name="description"]')
-  if (descriptionMeta) {
-    descriptionMeta.setAttribute('content', props.description)
+const seo = computed<PageSeo>(() => {
+  const meta = route.meta || {}
+  return {
+    title: props.title || (meta.title as string) || defaultSeo.title,
+    description: props.description || (meta.description as string) || defaultSeo.description,
+    keywords: props.keywords || (meta.keywords as string) || defaultSeo.keywords
   }
-  
-  // Update meta keywords
-  const keywordsMeta = document.querySelector('meta[name="keywords"]')
-  if (keywordsMeta) {
-    keywordsMeta.setAttribute('content', props.keywords)
-  }
-  
-  // Update Open Graph tags
-  const ogTitle = document.querySelector('meta[property="og:title"]')
-  if (ogTitle) {
-    ogTitle.setAttribute('content', props.title)
-  }
-  
-  const ogDescription = document.querySelector('meta[property="og:description"]')
-  if (ogDescription) {
-    ogDescription.setAttribute('content', props.description)
-  }
-  
-  const ogUrl = document.querySelector('meta[property="og:url"]')
-  if (ogUrl) {
-    ogUrl.setAttribute('content', currentUrl)
-  }
-  
-  const ogImage = document.querySelector('meta[property="og:image"]')
-  if (ogImage) {
-    ogImage.setAttribute('content', `${baseUrl}${props.image}`)
-  }
-  
-  const ogType = document.querySelector('meta[property="og:type"]')
-  if (ogType) {
-    ogType.setAttribute('content', props.type)
-  }
-  
-  // Update Twitter tags
-  const twitterTitle = document.querySelector('meta[property="twitter:title"]')
-  if (twitterTitle) {
-    twitterTitle.setAttribute('content', props.title)
-  }
-  
-  const twitterDescription = document.querySelector('meta[property="twitter:description"]')
-  if (twitterDescription) {
-    twitterDescription.setAttribute('content', props.description)
-  }
-  
-  const twitterUrl = document.querySelector('meta[property="twitter:url"]')
-  if (twitterUrl) {
-    twitterUrl.setAttribute('content', currentUrl)
-  }
-  
-  const twitterImage = document.querySelector('meta[property="twitter:image"]')
-  if (twitterImage) {
-    twitterImage.setAttribute('content', `${baseUrl}${props.image}`)
-  }
-  
-  // Update canonical URL
-  const canonical = document.querySelector('link[rel="canonical"]')
-  if (canonical) {
-    canonical.setAttribute('href', currentUrl)
-  }
-}
-
-// Update meta tags when component mounts
-onMounted(() => {
-  updateMetaTags()
 })
 
-// Watch for prop changes
-watch(() => props, updateMetaTags, { deep: true })
+function upsertMeta(selector: string, attrs: Record<string, string>, content: string) {
+  let el = document.head.querySelector(selector) as HTMLMetaElement | null
+  if (!el) {
+    el = document.createElement('meta')
+    Object.entries(attrs).forEach(([key, value]) => el!.setAttribute(key, value))
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
+}
 
-// Watch for route changes
-watch(() => route.path, updateMetaTags)
+function upsertLink(rel: string, href: string) {
+  let el = document.head.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null
+  if (!el) {
+    el = document.createElement('link')
+    el.setAttribute('rel', rel)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('href', href)
+}
+
+function upsertJsonLd(id: string, data: Record<string, unknown>) {
+  let el = document.getElementById(id) as HTMLScriptElement | null
+  if (!el) {
+    el = document.createElement('script')
+    el.type = 'application/ld+json'
+    el.id = id
+    document.head.appendChild(el)
+  }
+  el.textContent = JSON.stringify(data)
+}
+
+function updateMetaTags() {
+  const { title, description, keywords } = seo.value
+  const path = route.path === '/' ? '/' : route.path
+  const currentUrl = absoluteUrl(path)
+  const imageUrl = props.image.startsWith('http') ? props.image : `${SITE_URL}${props.image}`
+
+  document.title = title
+
+  upsertMeta('meta[name="title"]', { name: 'title' }, title)
+  upsertMeta('meta[name="description"]', { name: 'description' }, description)
+  upsertMeta('meta[name="keywords"]', { name: 'keywords' }, keywords)
+  upsertMeta('meta[name="author"]', { name: 'author' }, SITE_NAME)
+  upsertMeta('meta[name="robots"]', { name: 'robots' }, 'index, follow, max-image-preview:large')
+
+  upsertMeta('meta[property="og:type"]', { property: 'og:type' }, props.type)
+  upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name' }, `${SITE_NAME} Portfolio`)
+  upsertMeta('meta[property="og:title"]', { property: 'og:title' }, title)
+  upsertMeta('meta[property="og:description"]', { property: 'og:description' }, description)
+  upsertMeta('meta[property="og:url"]', { property: 'og:url' }, currentUrl)
+  upsertMeta('meta[property="og:image"]', { property: 'og:image' }, imageUrl)
+  upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt' }, `${SITE_NAME} — Staff Software Engineer`)
+  upsertMeta('meta[property="og:locale"]', { property: 'og:locale' }, 'en_US')
+
+  upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card' }, 'summary_large_image')
+  upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title' }, title)
+  upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description' }, description)
+  upsertMeta('meta[name="twitter:url"]', { name: 'twitter:url' }, currentUrl)
+  upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image' }, imageUrl)
+  upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt' }, `${SITE_NAME} — Staff Software Engineer`)
+
+  upsertLink('canonical', currentUrl)
+
+  upsertJsonLd('structured-data-person', {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    image: `${SITE_URL}/me.png`,
+    jobTitle: 'Staff Software Engineer',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Rivian',
+      url: 'https://rivian.com'
+    },
+    alumniOf: [
+      {
+        '@type': 'CollegeOrUniversity',
+        name: 'University of Michigan Ross School of Business'
+      },
+      {
+        '@type': 'CollegeOrUniversity',
+        name: 'University of Wyoming'
+      }
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Ann Arbor',
+      addressRegion: 'MI',
+      addressCountry: 'US'
+    },
+    sameAs: [
+      'https://www.linkedin.com/in/aditi-anandm/',
+      'https://github.com/AditiAnand8',
+      'https://medium.com/@TechStacked',
+      'https://aditianand8.github.io'
+    ],
+    knowsAbout: [
+      'Software Engineering',
+      'Distributed Systems',
+      'Event-Driven Architecture',
+      'Python',
+      'Kafka',
+      'NATS',
+      'AWS',
+      'Vue.js',
+      'Supply Chain Systems'
+    ],
+    description
+  })
+
+  upsertJsonLd('structured-data-website', {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: `${SITE_NAME} Portfolio`,
+    url: SITE_URL,
+    description: defaultSeo.description,
+    inLanguage: 'en-US',
+    publisher: {
+      '@id': `${SITE_URL}/#person`
+    }
+  })
+
+  upsertJsonLd('structured-data-webpage', {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${currentUrl}#webpage`,
+    url: currentUrl,
+    name: title,
+    description,
+    isPartOf: {
+      '@id': `${SITE_URL}/#website`
+    },
+    about: {
+      '@id': `${SITE_URL}/#person`
+    },
+    inLanguage: 'en-US'
+  })
+}
+
+watchEffect(() => {
+  if (typeof document !== 'undefined') {
+    // track reactive deps
+    void seo.value
+    void route.path
+    updateMetaTags()
+  }
+})
 </script>
 
 <template>
-  <div style="display: none;"></div>
-</template> 
+  <div style="display: none;" aria-hidden="true"></div>
+</template>

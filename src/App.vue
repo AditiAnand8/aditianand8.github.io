@@ -63,23 +63,7 @@ function isActive(path: string) {
 
     <main class="flex-1 relative z-10 pt-8 pb-4">
       <!-- Home hero -->
-      <div v-if="isHome" class="text-center mb-4 px-6">
-        <div class="relative inline-block">
-          <div class="absolute inset-0 rounded-full bg-gradient-to-br from-slate-400/40 to-stone-400/30 blur-2xl scale-110"></div>
-          <img
-            alt="Aditi Anand"
-            class="relative mx-auto rounded-full object-cover border-[3px] border-white shadow-xl w-56 h-56 md:w-64 md:h-64 mb-6"
-            src="@/assets/me.png"
-          />
-          <div
-            class="absolute bottom-6 right-2 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white shadow-sm"
-            title="Open to opportunities"
-          ></div>
-        </div>
-        <div class="mx-auto max-w-4xl">
-          <Base msg="Aditi Anand" />
-        </div>
-      </div>
+      <Base v-if="isHome" msg="Aditi Anand" />
 
       <!-- Compact identity strip on inner pages -->
       <div v-else class="max-w-7xl mx-auto px-6 lg:px-10 mb-6">
@@ -87,7 +71,7 @@ function isActive(path: string) {
           <img
             alt="Aditi Anand"
             class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md"
-            src="@/assets/me.png"
+            src="@/assets/me-profile.jpg"
           />
           <div>
             <p class="font-display text-xl font-semibold text-slate-900 tracking-tight">Aditi Anand</p>
@@ -100,7 +84,7 @@ function isActive(path: string) {
         </div>
       </div>
 
-      <RouterView />
+      <RouterView v-if="!isHome" />
     </main>
 
     <footer class="relative z-10 mt-16 border-t border-slate-800 bg-slate-900 text-white py-10">

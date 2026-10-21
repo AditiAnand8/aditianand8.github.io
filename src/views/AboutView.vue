@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 //@ts-ignore
 import { portfolioContent } from '../assets/about'
+import PhotoGallery from '../components/PhotoGallery.vue'
 
 const portfolio = portfolioContent
-const filter = ref<'all' | 'awards' | 'education' | 'certifications' | 'skills'>('all')
+const route = useRoute()
+const filter = ref<'all' | 'offclock' | 'awards' | 'education' | 'certifications' | 'skills'>(
+  route.query.section === 'offclock' ? 'offclock' : 'all'
+)
 
 const filters = [
   { id: 'all' as const, label: 'All' },
+  { id: 'offclock' as const, label: 'Off the clock' },
   { id: 'awards' as const, label: 'Awards' },
   { id: 'education' as const, label: 'Education' },
   { id: 'certifications' as const, label: 'Certifications' },
@@ -66,6 +72,10 @@ function isFeatured(skill: string) {
         </button>
       </div>
     </header>
+
+    <div v-if="showSection('offclock')" class="mb-14">
+      <PhotoGallery />
+    </div>
 
     <section v-if="showSection('awards') && portfolio.awards?.length" class="mb-12">
       <h3 class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 mb-4">Awards</h3>

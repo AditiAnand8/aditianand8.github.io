@@ -2,6 +2,7 @@ export const portfolioContent = {
   about: {
     name: 'Aditi Anand',
     title: 'Staff Software Engineer @ Rivian',
+    secondaryTitle: 'MBA Candidate @ University of Michigan Ross',
     location: 'ANN ARBOR, MI, USA',
     professionalSummary: `Hello! I'm Aditi Anand, a Staff Software Engineer with 12+ years building and scaling production systems across automotive manufacturing, higher education, and enterprise software.
     At Rivian, I lead a team of 3 engineers building the real-time replenishment platform for the R2 production program — a NATS-driven system that keeps every shop and assembly line supplied, integrated with SAP ERP.
