@@ -521,6 +521,7 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
   letter-spacing: -0.03em;
   line-height: 1.05;
   font-variant-numeric: tabular-nums;
+  color: #ffffff;
 }
 
 .stat-suffix {
@@ -531,7 +532,7 @@ onBeforeUnmount(() => cancelAnimationFrame(frame))
   margin-top: 0.5rem;
   font-size: 0.8rem;
   line-height: 1.45;
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 /* Sections */
